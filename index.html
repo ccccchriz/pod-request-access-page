@@ -17,38 +17,55 @@
   </head>
   <body>
     <main>
-      <div class="">
-        <img src="assets/images/mobile/logo.svg" alt="Pod logo" />
-        <h1 class="visually-hidden">pod</h1>
-      </div>
-      <h2>Publish your podcasts <span>everywhere.</span></h2>
-      <p>
+      <img
+        src="assets/images/mobile/logo.svg"
+        alt="Pod logo"
+        class="main__image"
+      />
+      <h1 class="visually-hidden">pod</h1>
+      <h2 class="main__title">
+        Publish your podcasts
+        <span class="main__title--white">everywhere.</span>
+      </h2>
+      <p class="main__paragraph">
         Upload your audio to Pod with a single click. We’ll then distribute your
         podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
         more!
       </p>
-      <ul>
-        <li><img src="assets/images/mobile/spotify.svg" alt="Spotify" /></li>
+      <ul class="main__company-list">
+        <li>
+          <img
+            src="assets/images/mobile/spotify.svg"
+            alt="Spotify"
+            class="main__company"
+          />
+        </li>
         <li>
           <img
             src="assets/images/mobile/apple-podcast.svg"
             alt="Apple Podcast"
+            class="main__company"
           />
         </li>
         <li>
           <img
             src="assets/images/mobile/google-podcasts.svg"
             alt="Google Podcast"
+            class="main__company"
           />
         </li>
         <li>
-          <img src="assets/images/mobile/pocket-casts.svg" alt="Pocket Casts" />
+          <img
+            src="assets/images/mobile/pocket-casts.svg"
+            alt="Pocket Casts"
+            class="main__company"
+          />
         </li>
       </ul>
-      <form action="">
+      <form action="" class="main__form">
         <label for="email" class="visually-hidden">Email address</label>
-        <input type="email" name="email" id="email" />
-        <button>Request access</button>
+        <input type="email" name="email" id="email" class="main__input" />
+        <button type="submit" class="main__submit">Request access</button>
       </form>
     </main>
   </body>
