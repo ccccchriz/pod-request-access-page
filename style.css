@@ -211,7 +211,7 @@ header {
   .page {
     padding-left: 2.5rem;
     padding-top: 3rem;
-    margin-right: 6rem;
+    max-width: 42rem;
     background-color: var(--clr-neutral-500);
     justify-items: start;
     gap: 2rem;
