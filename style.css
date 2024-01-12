@@ -109,13 +109,6 @@ h6 {
 body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-light);
-}
-
-main {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  gap: 1rem;
   min-height: 100vh;
   min-height: 100dvh;
   background-color: var(--clr-neutral-400);
@@ -123,15 +116,27 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
+}
+.page {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 1rem;
   padding: 1.5rem;
 }
 
-.main__image {
+header {
+  display: grid;
+  place-items: center;
+}
+
+.header__image {
+  margin-top: 3rem;
   margin-bottom: 2.5rem;
   max-width: 8.5rem;
 }
 
-.main__title {
+.page__title {
   text-align: center;
   color: var(--clr-accent-green);
   font-weight: var(--fw-light);
@@ -139,18 +144,18 @@ main {
   line-height: 1.46154;
 }
 
-.main__title--white {
+.page__title--white {
   color: var(--clr-neutral-100);
 }
 
-.main__paragraph {
+.page__paragraph {
   color: var(--clr-neutral-200);
   text-align: center;
   font-size: 0.9375rem;
   line-height: 1.66667;
 }
 
-.main__company-list {
+.page__company-list {
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 0;
@@ -161,7 +166,7 @@ main {
   opacity: 0.7;
 }
 
-.main__form {
+.page__form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -171,7 +176,7 @@ main {
   font-size: 0.875rem;
 }
 
-.main__input {
+.page__input {
   padding: 0.5rem 2rem;
   border: none;
   border-radius: 1.75rem;
@@ -179,17 +184,73 @@ main {
   color: var(--clr-neutral-100);
 }
 
-.main__input::placeholder {
+.page__input::placeholder {
   color: var(--clr-neutral-100);
   font-size: 0.875rem;
   opacity: 0.5;
 }
 
-.main__submit {
+.page__submit {
   padding: 0.5rem 0;
   border: none;
   border-radius: 1.75rem;
   background-color: var(--clr-accent-green);
   color: var(--clr-neutral-500);
   box-shadow: 0px 25px 20px -20px var(--clr-shadow);
+}
+
+@media (min-width: 40rem) {
+  body {
+    background-blend-mode: normal;
+    background: url(assets/images/tablet/bg-pattern-dots.svg) no-repeat bottom
+        left 2rem,
+      var(--clr-neutral-500) url(assets/images/tablet/image-host.jpg) no-repeat
+        top right / 492px 797px;
+  }
+
+  .page {
+    padding-left: 2.5rem;
+    padding-top: 3rem;
+    margin-right: 6rem;
+    background-color: var(--clr-neutral-500);
+    justify-items: start;
+    gap: 2rem;
+  }
+
+  .header__image {
+    margin-left: 2.5rem;
+    margin-bottom: 9rem;
+    justify-self: start;
+  }
+
+  .page__title {
+    margin-top: 4rem;
+    font-size: 3rem;
+    line-height: 1.16667;
+    text-align: left;
+  }
+
+  .page__paragraph {
+    font-size: 1.125rem;
+    line-height: 1.555;
+    text-align: left;
+    margin-right: 10rem;
+  }
+
+  .page__company-list {
+    grid-row: 4 /5;
+  }
+
+  .page__form {
+    width: max-content;
+    flex-direction: row;
+    border-radius: 1.75rem;
+    background-color: var(--clr-neutral-400);
+    padding: 0.25rem;
+  }
+
+  .page__submit {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
 }
