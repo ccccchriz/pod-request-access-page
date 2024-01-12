@@ -65,7 +65,7 @@
             />
           </li>
         </ul>
-        <form action="" class="page__form">
+        <form action="" class="page__form" id="form" novalidate>
           <label for="email" class="visually-hidden">Email address</label>
           <input
             type="email"
@@ -74,9 +74,11 @@
             class="page__input"
             placeholder="Email address"
           />
+          <div class="page__error" id="error" aria-live="assertive"></div>
           <button type="submit" class="page__submit">Request access</button>
         </form>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
