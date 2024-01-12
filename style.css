@@ -116,6 +116,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
 }
 .page {
   display: grid;
@@ -206,10 +208,14 @@ header {
         left 2rem,
       var(--clr-neutral-500) url(assets/images/tablet/image-host.jpg) no-repeat
         top right / 492px 797px;
+    padding-left: 2.5rem;
+  }
+
+  main {
+    flex-grow: 1;
   }
 
   .page {
-    padding-left: 2.5rem;
     padding-top: 3rem;
     max-width: 42rem;
     background-color: var(--clr-neutral-500);
@@ -218,13 +224,12 @@ header {
   }
 
   .header__image {
-    margin-left: 2.5rem;
-    margin-bottom: 9rem;
+    /* margin-bottom: 9rem; */
     justify-self: start;
   }
 
   .page__title {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     font-size: 3rem;
     line-height: 1.16667;
     text-align: left;
@@ -238,7 +243,7 @@ header {
   }
 
   .page__company-list {
-    grid-row: 4 /5;
+    grid-row: 4 / 5;
   }
 
   .page__form {
@@ -252,5 +257,15 @@ header {
   .page__submit {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  body {
+    background: url(assets/images/tablet/bg-pattern-dots.svg) no-repeat bottom
+        4rem right,
+      var(--clr-neutral-500) url(assets/images/desktop/image-host.jpg) no-repeat
+        center right;
+    padding-left: 10rem;
   }
 }
